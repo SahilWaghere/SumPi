@@ -1,0 +1,9 @@
+import pyttsx3
+
+def text_to_speech():
+    text = "I hope this email finds you well. I wanted to update you on the latest project progress. We have successfully completed the first phase and are now moving on to phase two.Please ensure that all reports are submitted by Friday. Let me know if you have any questions."
+    engine = pyttsx3.init()
+    engine.say(text)
+    engine.runAndWait()
+
+text_to_speech()

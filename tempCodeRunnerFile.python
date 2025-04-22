@@ -1,0 +1,15 @@
+from datetime import datetime, timedelta
+
+def simulate_logging(n, logs):
+    start_time = datetime.strptime("10:00:01", "%H:%M:%S")
+    
+    for i in range(n):
+        timestamp = start_time + timedelta(seconds=i)
+        print(f"[{timestamp.strftime('%H:%M:%S')}] {logs[i]}")
+
+# Reading input
+n = int(input())
+logs = [input().strip() for _ in range(n)]
+
+# Simulating logging system
+simulate_logging(n, logs)
